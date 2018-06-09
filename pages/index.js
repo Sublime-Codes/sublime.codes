@@ -4,6 +4,8 @@ import {Panel} from '../components/Panel'
 import {ContactUs} from '../components/ContactUs'
 import {Hero} from '../components/Hero'
 import {Separator} from '../components/Separator'
+import {CostAndValue} from '../components/CostAndValue'
+import {Map} from '../components/Map'
 
 const Index = () => (
   <PageLayout
@@ -14,7 +16,10 @@ const Index = () => (
     <Hero />
     <Panel />
     <Separator />
+    <CostAndValue />
+    <Separator />
     <ContactUs />
+    <Map />
   </PageLayout>
 )
 
