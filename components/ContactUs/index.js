@@ -185,12 +185,6 @@ export const ContactUs = () => (
           flex-basis: 66.66667%;
         }
       }
-
-      @media (min-width: 32em) {
-        .contactUs-input {
-          padding: 0.75em;
-        }
-      }
     `}</style>
   </>
 )
