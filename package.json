@@ -1,0 +1,30 @@
+{
+  "name": "sublime.codes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@s-ui/lint": "2"
+  },
+  "dependencies": {
+    "next": "6.0.3",
+    "react": "16.4.0",
+    "react-dom": "16.4.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": false
+    }
+  }
+}
