@@ -2,7 +2,7 @@ import Head from 'next/head'
 import {Footer} from '../Footer'
 
 export const PageLayout = ({children, description = '', title = '', url}) => (
-  <>
+  <React.Fragment>
     <Head>
       <title>{`${title} - sublime.codes`}</title>
       <meta name="description" content={description} />
@@ -15,10 +15,6 @@ export const PageLayout = ({children, description = '', title = '', url}) => (
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="sublime_codes" />
       <meta name="twitter:creator" content="sublime_codes" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Source+Code+Pro"
-        rel="stylesheet"
-      />
     </Head>
     <main>{children}</main>
     <Footer />
@@ -26,7 +22,9 @@ export const PageLayout = ({children, description = '', title = '', url}) => (
       {`
         body {
           -webkit-font-smoothing: antialiased;
-          font-family: 'Source Code Pro', monospace;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol';
           margin: 0;
           padding: 0;
           display: flex;
@@ -53,7 +51,12 @@ export const PageLayout = ({children, description = '', title = '', url}) => (
         h4 {
           margin: 0;
         }
+        ::selection {
+          background-color: #a8dcff;
+        }
       `}
     </style>
-  </>
+  </React.Fragment>
 )
+
+PageLayout.propTypes = {}
