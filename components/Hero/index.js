@@ -1,62 +1,42 @@
+import {WindowControl} from './WindowControl'
+
 // https://images.unsplash.com/photo-1417577097439-425fb7dec05e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93a5dd474dcb87271705bb8a7edf8a98&auto=format&fit=crop&w=3289&q=80
 export const Hero = () => (
-  <>
-    <div className="hero">
-      <div className="hero-image" />
-      <div className="hero-text">
-        <h1>
-          Let us make your next project <i>sublime</i>.
-        </h1>
-        <h2>40 years of experience combined in one consultancy team</h2>
-      </div>
+  <React.Fragment>
+    <div>
+      <h1>
+        Let us make your next project <i>sublime</i>
+      </h1>
+      <h2>40 years of experience combined in one consultancy team</h2>
     </div>
     <style jsx>{`
       h1,
       h2 {
-        color: #fff;
-        font-size: 32px;
-        font-family: 'Source Code Pro', monospace;
-        letter-spacing: -1.5px;
-        text-transform: uppercase;
-        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+        color: #222;
+        display: block;
+        font-size: 42px;
+        font-weight: 300;
+        letter-spacing: -1px;
+      }
+      h1 i {
+        font-weight: 400;
       }
       h2 {
-        color: #eee;
-        font-size: 24px;
+        color: #09f;
+        font-size: 21px;
+        font-weight: 300;
         line-height: 100%;
+        letter-spacing: 0px;
+        text-transform: none;
       }
-      .hero {
-        position: relative;
-        height: 65vh;
+      div {
         width: 100%;
-      }
-      .hero-text {
-        bottom: 0;
-        padding: 64px;
-        position: absolute;
-        z-index: 2;
-      }
-      .hero-image {
-        background-image: url('https://images.unsplash.com/photo-1417577097439-425fb7dec05e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93a5dd474dcb87271705bb8a7edf8a98&auto=format&fit=crop&w=3289&q=80');
-        background-size: cover;
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-      }
-      .hero-image::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
-        opacity: 0.3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 72px 0;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
