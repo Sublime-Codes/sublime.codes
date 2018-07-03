@@ -1,190 +1,148 @@
-export const ContactUs = () => (
-  <>
-    <section className="contactUs">
-      <div className="contactUs-container">
-        <div className="contactUs-header">
-          <h3 className="contactUs-title">Contacta nos</h3>
-        </div>
-        <div className="contactUs-body">
+import {Button} from '../Button'
+import {SectionBlock} from '../SectionBlock'
+
+export class ContactUs extends React.Component {
+  state = {
+    step: 0,
+    who: 'person',
+    what: 'create a new project',
+    where: ''
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <SectionBlock
+          title={
+            <span id="contact">
+              Get in touch, <strong>contact us</strong>
+            </span>
+          }
+        >
           <form
             action="https://formspree.io/carlosvillu@gmail.com"
             method="POST"
-            className="contactUs-form"
           >
-            <label className="contactUs-input">
-              <span className="contactUs-label">Correo</span>
-              <input
-                className="contactUs-email"
-                type="email"
-                name="email"
-                placeholder="user@server.com"
-              />
-            </label>
-            <label className="contactUs-input">
-              <span className="contactUs-label">Mensaje</span>
-              <textarea
-                className="contactUs-message"
-                name="message"
-                placeholder="tell me more..."
-              />
-            </label>
-            <button type="submit" className="contactUs-button">
-              <span>Work with us</span>
-            </button>
+            <ol>
+              <li>
+                <span>
+                  <label htmlFor="q1">What's your name? *</label>
+                </span>
+                <input
+                  placeholder="Type your name here"
+                  id="q1"
+                  name="q1"
+                  type="text"
+                  tabIndex="0"
+                  required
+                />
+              </li>
+              <li>
+                <span>
+                  <label htmlFor="q3">What's your email?</label>
+                </span>
+                <input
+                  placeholder="your@email.com"
+                  id="q3"
+                  name="q3"
+                  tabIndex="0"
+                  type="text"
+                  required
+                />
+              </li>
+              <li>
+                <span>
+                  <label htmlFor="q4">What's your position?</label>
+                </span>
+                <select id="q4" name="q4" tabIndex="0">
+                  <option>entrepeneur</option>
+                  <option>CTO</option>
+                  <option>developer</option>
+                  <option>person</option>
+                </select>
+              </li>
+              <li>
+                <span>
+                  <label htmlFor="q5">What do you need?</label>
+                </span>
+                <select id="q5" name="q5" tabIndex="0">
+                  <option>build a new idea</option>
+                  <option>accelerate my current project</option>
+                  <option>decouple my monolith</option>
+                  <option>train my developers</option>
+                </select>
+              </li>
+            </ol>
+            <footer>
+              <Button>Send the message</Button>
+            </footer>
           </form>
-        </div>
-      </div>
-    </section>
-    <style jsx>{`
-      .contactUs {
-        padding: 6em 0;
-      }
-
-      .contactUs::after {
-        content: '';
-        display: table;
-        clear: both;
-      }
-      .contactUs-container {
-        display: block;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 2%;
-        padding-right: 2%;
-      }
-      .contactUs-header,
-      .contactUs-body {
-        position: relative;
-        float: left;
-        width: 100%;
-        min-height: 1px;
-      }
-
-      .contactUs-title {
-        margin-bottom: 0.6em;
-        font-size: 1.6em;
-        line-height: 1.2;
-      }
-
-      .contactUs-form {
-        display: flex;
-        flex-direction: row;
-        flex-flow: wrap;
-        margin: 1em auto 3em;
-        width: 100%;
-      }
-
-      .contactUs-input {
-        float: left;
-        padding: 0.75em 0;
-        width: 100%;
-      }
-
-      .contactUs-label {
-        position: relative;
-        color: #111;
-      }
-
-      .contactUs-email {
-        border: 1px solid #a7a6a6;
-        box-shadow: 0 2px 4px 0 #f2f2f2;
-        cursor: text;
-        font-size: 0.8em;
-        padding: 1.25em;
-        display: block;
-        width: 100%;
-        padding: 1.2rem 0 0.9rem;
-        letter-spacing: 0.15em;
-        color: rgba(0, 0, 0, 0.8);
-        background: #fff;
-        border: 0;
-        border-bottom: 1px solid #d7d7d7;
-        border-radius: 0;
-        box-shadow: none;
-        outline: 0;
-        transition: all 0.25s ease-in;
-        overflow: visible;
-        line-height: normal;
-      }
-
-      .contactUs-message {
-        border: 1px solid #a7a6a6;
-        box-shadow: 0 2px 4px 0 #f2f2f2;
-        cursor: text;
-        font-size: 0.8em;
-        padding: 1.25em;
-        font-family: akkurta, Inconsolata, monospace;
-        display: block;
-        width: 100%;
-        padding: 1.2rem 0 0.9rem;
-        letter-spacing: 0.15em;
-        color: rgba(0, 0, 0, 0.8);
-        background: #fff;
-        border: 0;
-        border-bottom: 1px solid #d7d7d7;
-        border-radius: 0;
-        box-shadow: none;
-        outline: 0;
-        transition: all 0.25s ease-in;
-        overflow: auto;
-        vertical-align: text-bottom;
-        width: 100%;
-      }
-
-      .contactUs-button {
-        width: auto;
-        padding: 0.6em 2em 0.45em;
-        font-family: akkurta, Inconsolata, monospace;
-        font-size: 0.7em;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        line-height: 1.9;
-        overflow: hidden;
-        border: 0;
-        border-radius: 0;
-        transition: all 0.5s ease-in;
-        cursor: pointer;
-        -webkit-appearance: none;
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        color: #fff;
-        background-color: #c43a31;
-      }
-
-      @media (min-width: 54em) {
-        .contactUs-title:after {
-          background: #d45c54;
-          content: ' ';
-          position: relative;
-          top: 1.5rem;
-          display: block;
-          height: 1px;
-          margin-bottom: 3.5rem;
-        }
-      }
-      @media (min-width: 54em) {
-        .contactUs-header,
-        .contactUs-body {
-          padding-left: 2%;
-          padding-right: 2%;
-        }
-      }
-
-      @media (min-width: 54em) {
-        .contactUs-header {
-          max-width: 33.33333%;
-          flex-basis: 33.33333%;
-        }
-      }
-      @media (min-width: 54em) {
-        .contactUs-body {
-          max-width: 66.66667%;
-          flex-basis: 66.66667%;
-        }
-      }
-    `}</style>
-  </>
-)
+        </SectionBlock>
+        <style jsx>{`
+          footer {
+            display: block;
+            text-align: center;
+          }
+          ol {
+            list-style: none;
+            transition: height 0.4s;
+            position: relative;
+            margin: 0;
+            padding: 0;
+          }
+          li {
+            padding-bottom: 36px;
+            z-index: 100;
+            position: relative;
+            transition: visibility 0s 0.4s, height 0s 0.4s;
+          }
+          li > span {
+            display: block;
+            overflow: hidden;
+          }
+          span label {
+            display: block;
+          }
+          input {
+            color: #222;
+            font-size: 24px;
+            font-weight: 300;
+            width: 100%;
+            padding: 16px 16px 4px 0;
+            border: 0;
+            border-bottom: 1px solid #eee;
+          }
+          input::placeholder {
+            font-weight: 200;
+          }
+          form {
+            border: 1px solid #eee;
+            font-size: 16px;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 16px;
+          }
+          select {
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;utf8,<svg height="32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M24.3 11.3L16 19.6l-8.3-8.3a1 1 0 1 0-1.4 1.4l9 9c.4.4 1 .4 1.4 0l9-9c.4-.4.4-1 0-1.4a1 1 0 0 0-1.4 0z" fill="#121313"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right center;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #eee;
+            color: #222;
+            cursor: context-menu;
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 16px;
+            padding: 0px 48px 4px 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+        `}</style>
+      </React.Fragment>
+    )
+  }
+}
