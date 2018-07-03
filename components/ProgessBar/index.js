@@ -1,32 +1,25 @@
-export const ProgressBar = ({percentage}) => (
-  <>
-    <div className="progressBar">
-      <div className="progressBar-fill" style={{width: `${percentage}%`}}>
-        250k +
-      </div>
-    </div>
+export const ProgressBar = ({percentage, value}) => (
+  <React.Fragment>
+    <span>{value}</span>
+    <progress style={{width: `${percentage}%`}} />
     <style jsx>{`
-      .progressBar {
-        margin-bottom: 0px;
-        background-color: transparent;
-        box-shadow: none;
+      progress {
         -webkit-box-shadow: none;
+        background-color: transparent;
         border-radius: 0px;
-        overflow: hidden;
+        box-shadow: none;
         height: 20px;
+        margin-bottom: 0px;
+        overflow: hidden;
       }
 
-      .progressBar-fill {
+      span {
         border-radius: 0px;
-        background-color: #0a8bbb;
+        display: block;
         font-size: 14px;
-        float: left;
-        height: 100%;
-        width: 0%;
         line-height: 20px;
-        color: #fff;
-        text-align: center;
+        color: #09f;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
