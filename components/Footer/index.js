@@ -1,33 +1,36 @@
+import {Logo} from '../Logo'
+
 export const Footer = () => (
-  <>
+  <React.Fragment>
     <footer>
-      <strong>Sublime.codes</strong>
+      <Logo />
+      <i>Make your project sublime</i>
       <section>
-        <p>Primer de Maig, 16</p>
-        <p>Local Baixos - UIKÚ</p>
-        <p>El Prat de Llobregat (Barcelona)</p>
-        <p>08820</p>
-      </section>
-      <section>
-        <p>Primer de Maig, 16</p>
-        <p>Local Baixos - UIKÚ</p>
-        <p>El Prat de Llobregat (Barcelona)</p>
-        <p>08820</p>
+        <br />
+        🏢<br />
+        Primer de Maig, 16<br />
+        Local - UIKÚ<br />
+        El Prat de Llobregat (Barcelona)<br />
+        08820<br />
       </section>
     </footer>
     <style jsx>{`
       footer {
-        background-color: #111;
-        color: #fff;
-        display: flex;
+        align-items: center;
+        background: #f0f0f0;
         flex-direction: column;
-        flex-wrap: nowrap;
+        display: flex;
         justify-content: center;
-        padding: 32px 8px;
-        position: relative;
-        text-transform: uppercase;
-        width: 100%;
+        padding: 32px;
+        text-align: center;
+      }
+      i {
+        font-family: Menlo, monospace;
+        font-size: 10px;
+      }
+      section {
+        font-size: 12px;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
