@@ -1,5 +1,5 @@
 export const Panel = () => (
-  <>
+  <React.Fragment>
     <section className="panel">
       <div className="panel-container">
         <div className="panel-header">
@@ -52,7 +52,6 @@ export const Panel = () => (
       .panel-button {
         width: auto;
         padding: 0.6em 2em 0.45em;
-        font-family: akkurta, Inconsolata, monospace;
         font-size: 0.7em;
         text-align: center;
         text-transform: uppercase;
@@ -103,5 +102,5 @@ export const Panel = () => (
         }
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
