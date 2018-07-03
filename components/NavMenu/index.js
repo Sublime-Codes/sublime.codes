@@ -1,8 +1,8 @@
 export const NavMenu = () => (
-  <>
+  <React.Fragment>
     <nav>
       <a href="#about">ABOUT</a>
-      <a href="#we">WE</a>
+      <a href="#team">TEAM</a>
       <a href="#vision">VISION</a>
       <a href="#contact">CONTACT</a>
     </nav>
@@ -14,24 +14,27 @@ export const NavMenu = () => (
         flex: 1 0 auto;
         height: 100%;
         justify-content: flex-end;
-        margin-right: 2.2em;
-        padding-top: 1px;
         pointer-events: all;
         z-index: 999;
       }
       nav a {
         align-items: center;
-        color: #fff;
-        color: #fff;
+        color: #999;
         display: flex;
         flex: 0 1 auto;
         height: 100%;
         justify-content: center;
-        padding: 0 2em;
-        text-transform: uppercase;
-        transition: color 0.3s ease 0.1s;
+        margin: 0 1em;
+        padding: 0 1em;
+        text-transform: lowercase;
+        transition: all 0.3s ease;
         word-spacing: -0.2em;
       }
+      nav a:hover {
+        box-shadow: inset 0 -1px 0 #09f;
+        padding-bottom: 10px;
+        color: #000;
+      }
     `}</style>
-  </>
+  </React.Fragment>
 )
