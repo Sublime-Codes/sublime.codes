@@ -1,28 +1,28 @@
+import {Logo} from '../Logo'
 import {NavMenu} from '../NavMenu'
 
 export const Topbar = () => (
-  <>
+  <React.Fragment>
     <header>
-      sublime.codes
+      <Logo />
       <NavMenu />
     </header>
     <style jsx>{`
       header {
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.35);
-        color: #fff;
+        color: #000;
         display: flex;
         flex-flow: row nowrap;
         height: 48px;
         justify-content: space-between;
-        padding: 0 16px;
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 32px 0;
         pointer-events: none;
-        position: fixed;
-        transition: background-color 1s ease;
         top: 0;
+        transition: background-color 1s ease;
         width: 100%;
-        z-index: 998;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
