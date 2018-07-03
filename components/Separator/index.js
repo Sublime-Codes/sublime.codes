@@ -1,8 +1,8 @@
 export const Separator = () => (
-  <>
+  <React.Fragment>
     <hr className="separator" />
     <style jsx>{`
-      .separator {
+      hr {
         height: 2em;
         background-color: tomato;
         color: tomato;
@@ -13,5 +13,5 @@ export const Separator = () => (
         margin: 1em 0;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
