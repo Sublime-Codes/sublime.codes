@@ -29,23 +29,23 @@ export class ContactUs extends React.Component {
                   <label htmlFor="q1">What's your name? *</label>
                 </span>
                 <input
-                  placeholder="Type your name here"
+                  placeholder="Type your name"
                   id="q1"
                   name="q1"
-                  type="text"
                   tabIndex="0"
+                  type="text"
                   required
                 />
               </li>
               <li>
                 <span>
-                  <label htmlFor="q3">What's your email?</label>
+                  <label htmlFor="q3">What's your email? *</label>
                 </span>
                 <input
                   placeholder="your@email.com"
                   id="q3"
                   name="q3"
-                  tabIndex="0"
+                  tabIndex="1"
                   type="text"
                   required
                 />
@@ -70,6 +70,7 @@ export class ContactUs extends React.Component {
                   <option>accelerate my current project</option>
                   <option>decouple my monolith</option>
                   <option>train my developers</option>
+                  <option>another thing</option>
                 </select>
               </li>
             </ol>

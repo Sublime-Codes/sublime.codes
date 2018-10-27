@@ -20,7 +20,7 @@ export const Hero = () => (
       }
       h1 i {
         font-size: 42px;
-        font-weight: 400;
+        font-weight: bold;
       }
       h2 {
         color: #09f;
