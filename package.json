@@ -17,9 +17,8 @@
   "dependencies": {
     "next": "7.0.2",
     "prop-types": "15.6.2",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
-    "react-google-maps": "9.4.5",
+    "react": "16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
     "react-typist": "2.0.4",
     "recompose": "0.30.0"
   },

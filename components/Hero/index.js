@@ -19,6 +19,7 @@ export const Hero = () => (
         letter-spacing: -1px;
       }
       h1 i {
+        font-size: 42px;
         font-weight: 400;
       }
       h2 {
