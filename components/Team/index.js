@@ -44,20 +44,24 @@ export function Team() {
                 onMouseOver={handleHover(MEMBERS.CARLOS)}
                 onMouseOut={handleHover()}
               >
-                <strong>Carlos Villuendas</strong> es un fistro Lorem fistrum de
-                la pradera te va a hasé pupitaa tiene musho peligro apetecan a
-                peich fistro ahorarr diodenoo. A gramenawer te voy a borrar el
-                cerito caballo blanco caballo negroorl.
+                <strong>Carlos Villuendas</strong> is a full-stack developer
+                with 12+ years experience in software development. He's been
+                involved in several international web projects with millions of
+                daily users. He likes all things JavaScript and has a passion
+                for minimalistic, highly-scalable web architecture. Avid
+                contributor to open-source projects and, in general, an
+                enthusiast of a free Internet.
               </p>
               <p
                 className={hovered === MEMBERS.MIGUEL ? 'hover' : ''}
                 onMouseOver={handleHover(MEMBERS.MIGUEL)}
                 onMouseOut={handleHover()}
               >
-                <strong>Miguel Ángel Durán</strong> es un fistro Lorem fistrum
-                de la pradera te va a hasé pupitaa tiene musho peligro apetecan
-                a peich fistro ahorarr diodenoo. A gramenawer te voy a borrar el
-                cerito caballo blanco caballo.
+                <strong>Miguel Ángel Durán</strong> is a professional developer
+                with an ample ReactJS background and over 15 years of experience
+                as a web consultant. He has lately specialized in improving web
+                app performance. He is a reference in the frontend Community
+                thanks to his YouTube channel and Udemy courses.
               </p>
             </div>
           </SectionBlockColumn>
