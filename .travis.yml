@@ -13,6 +13,6 @@ cache:
     - node_modules
 
 script:
-  - npm run build
+  - npm run build && npm run export
   - npm install now -g
   - now public --token $NOW_TOKEN && now alias --token $NOW_TOKEN

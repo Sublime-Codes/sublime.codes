@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "next export -o public",
+    "build": "next build",
     "dev": "next",
+    "export": "next export -o public",
     "lint": "sui-lint js"
   },
   "keywords": [],
