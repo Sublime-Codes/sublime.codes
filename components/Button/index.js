@@ -1,5 +1,5 @@
 export const Button = ({children, onClick}) => (
-  <>
+  <React.Fragment>
     <button onClick={onClick}>{children}</button>
     <style jsx>{`
       button {
@@ -28,5 +28,5 @@ export const Button = ({children, onClick}) => (
         background: #09f;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )

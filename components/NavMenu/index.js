@@ -1,9 +1,8 @@
 export const NavMenu = () => (
-  <>
+  <React.Fragment>
     <nav>
-      <a href="#about">ABOUT</a>
       <a href="#team">TEAM</a>
-      <a href="#vision">VISION</a>
+      <a href="#price">PRICING</a>
       <a href="#contact">CONTACT</a>
     </nav>
     <style jsx>{`
@@ -36,5 +35,5 @@ export const NavMenu = () => (
         color: #000;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )

@@ -1,5 +1,5 @@
 export const Panel = () => (
-  <>
+  <React.Fragment>
     <section className="panel">
       <div className="panel-container">
         <div className="panel-header">
@@ -102,5 +102,5 @@ export const Panel = () => (
         }
       }
     `}</style>
-  </>
+  </React.Fragment>
 )

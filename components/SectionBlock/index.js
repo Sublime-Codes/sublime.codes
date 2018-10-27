@@ -34,6 +34,7 @@ export const SectionBlock = ({children, isFlex, title}) => (
         justify-content: space-between;
       }
       h2 {
+        font-size: 24px;
         font-weight: 300;
         padding-bottom: 16px;
       }

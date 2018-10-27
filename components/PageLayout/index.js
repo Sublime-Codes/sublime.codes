@@ -2,7 +2,7 @@ import Head from 'next/head'
 import {Footer} from '../Footer'
 
 export const PageLayout = ({children, description = '', title = '', url}) => (
-  <>
+  <React.Fragment>
     <Head>
       <title>{`${title} - sublime.codes`}</title>
       <meta name="description" content={description} />
@@ -56,7 +56,7 @@ export const PageLayout = ({children, description = '', title = '', url}) => (
         }
       `}
     </style>
-  </>
+  </React.Fragment>
 )
 
 PageLayout.propTypes = {}

@@ -1,9 +1,7 @@
 import {Topbar} from '../components/Topbar'
 import {PageLayout} from '../components/PageLayout'
-import {Panel} from '../components/Panel'
 import {ContactUs} from '../components/ContactUs'
 import {Hero} from '../components/Hero'
-import {Separator} from '../components/Separator'
 import {CostAndValue} from '../components/CostAndValue'
 import {Team} from '../components/Team'
 

@@ -1,7 +1,7 @@
 import Typist from 'react-typist'
 
 export const Logo = () => (
-  <>
+  <React.Fragment>
     <Typist startDelay={100}>sublime.codes</Typist>
     <style jsx global>
       {`
@@ -30,5 +30,5 @@ export const Logo = () => (
         }
       `}
     </style>
-  </>
+  </React.Fragment>
 )

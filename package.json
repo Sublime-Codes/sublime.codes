@@ -1,12 +1,14 @@
 {
   "name": "sublime.codes",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "dev": "next",
+    "export": "next export -o public",
+    "lint": "sui-lint js"
   },
   "keywords": [],
   "author": "",
@@ -18,16 +20,15 @@
     "next": "7.0.2",
     "prop-types": "15.6.2",
     "react": "16.7.0-alpha.0",
-    "react-dom": "^16.7.0-alpha.0",
-    "react-typist": "2.0.4",
-    "recompose": "0.30.0"
+    "react-dom": "16.7.0-alpha.0",
+    "react-typist": "2.0.4"
   },
   "eslintConfig": {
     "extends": [
       "./node_modules/@s-ui/lint/eslintrc.js"
     ],
     "rules": {
-      "react/react-in-jsx-scope": false
+      "react/react-in-jsx-scope": 0
     }
   }
 }

@@ -1,7 +1,7 @@
 import {Logo} from '../Logo'
 
 export const Footer = () => (
-  <>
+  <React.Fragment>
     <footer>
       <Logo />
       <i>Make your project sublime</i>
@@ -32,5 +32,5 @@ export const Footer = () => (
         font-size: 12px;
       }
     `}</style>
-  </>
+  </React.Fragment>
 )
