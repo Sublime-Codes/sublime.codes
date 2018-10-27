@@ -21,7 +21,7 @@ jobs:
       if: type = pull_request
       script:
         - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN sublime-codes-pr-$TRAVIS_PULL_REQUEST
-        - curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST -d "{\"body\": \"PR URL: https://sublime-codes-pr-$TRAVIS_PULL_REQUEST.now.sh\"}" "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
+        - ./scripts/comment.sh
     - stage: deploy pro
       if: branch = master AND NOT type = pull_request
       script:
