@@ -5,4 +5,4 @@ Website for sublime.codes
 
 # Install
 
-`$ npm install --force-online`
+`$ npm install`
