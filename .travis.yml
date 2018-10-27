@@ -15,4 +15,14 @@ cache:
 script:
   - npm run build && npm run export
   - npm install now -g
-  - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN
+
+jobs:
+  include:
+    - stage: Deploy on now.sh
+      if: type = pull_request
+      script:
+        - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN `pbpaste` https://sublime-codes-pr-$TRAVIS_PULL_REQUEST.now.sh
+    - stage: deploy pro
+      if: branch = master AND NOT type = pull_request
+      script:
+        - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN
