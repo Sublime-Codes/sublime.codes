@@ -12,11 +12,9 @@ export const CostAndValue = () => (
     >
       <SectionBlockColumn>
         <p>
-          Our portfolio is diverse but we are best fit for rapid prototypes and
-          large complex software. With our startup background we are extremely
-          good at evaluating ideas and squeezing the most out of a very small
-          budget. With fast iterations you have an amazing product to start your
-          business with.
+          No matter if you need to create a Minimum Viable Product, if you want
+          us to do an on-site workshop, need . We have a single We only accept
+          projects with a minium of 3 hours.
         </p>
         <strong>100€ per person 👩‍💻 per hour 🕰</strong>
       </SectionBlockColumn>
