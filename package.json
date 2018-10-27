@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
+    "co": "sui-mono commit",
     "dev": "next",
     "export": "next export -o public",
     "lint": "sui-lint js"
@@ -14,7 +15,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@s-ui/lint": "2"
+    "@s-ui/lint": "2",
+    "@s-ui/mono": "1"
   },
   "dependencies": {
     "next": "7.0.2",
@@ -29,6 +31,11 @@
     ],
     "rules": {
       "react/react-in-jsx-scope": 0
+    }
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": "@s-ui/mono/src/types"
     }
   }
 }
