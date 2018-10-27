@@ -3,7 +3,8 @@ import {SectionBlock, SectionBlockColumn} from '../SectionBlock'
 
 const MEMBERS = {
   CARLOS: 1,
-  MIGUEL: 2
+  MIGUEL: 2,
+  JOAN: 3
 }
 
 export function Team() {
@@ -35,6 +36,12 @@ export function Team() {
                 onMouseOut={handleHover()}
                 src="/static/miguel.jpg"
               />
+              <img
+                className={hovered === MEMBERS.JOAN ? 'hover' : ''}
+                onMouseOver={handleHover(MEMBERS.JOAN)}
+                onMouseOut={handleHover()}
+                src="/static/joan.jpg"
+              />
             </div>
           </SectionBlockColumn>
           <SectionBlockColumn>
@@ -62,6 +69,13 @@ export function Team() {
                 as a web consultant. He has lately specialized in improving web
                 app performance. He is a reference in the frontend Community
                 thanks to his YouTube channel and Udemy courses.
+              </p>
+              <p
+                className={hovered === MEMBERS.JOAN ? 'hover' : ''}
+                onMouseOver={handleHover(MEMBERS.JOAN)}
+                onMouseOut={handleHover()}
+              >
+                <strong>Joan Leon</strong>
               </p>
             </div>
           </SectionBlockColumn>
