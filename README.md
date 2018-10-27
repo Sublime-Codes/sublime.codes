@@ -2,3 +2,7 @@
 
 # web
 Website for sublime.codes
+
+# Install
+
+`$ npm install --force-online`
