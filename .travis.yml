@@ -21,7 +21,7 @@ jobs:
     - stage: Deploy on now.sh
       if: type = pull_request
       script:
-        - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN `pbpaste` https://sublime-codes-pr-$TRAVIS_PULL_REQUEST.now.sh
+        - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN `pbpaste` sublime-codes-pr-$TRAVIS_PULL_REQUEST
     - stage: deploy pro
       if: branch = master AND NOT type = pull_request
       script:
