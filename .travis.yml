@@ -14,10 +14,6 @@ cache:
 
 before_deploy: npm install now -g
 
-env:
-  - PROJECT=frontend-polls
-  - PROJECT=frontend-presentation
-
 script:
   - npm run build
   - now public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
