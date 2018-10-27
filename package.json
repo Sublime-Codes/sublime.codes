@@ -28,5 +28,9 @@
     "rules": {
       "react/react-in-jsx-scope": 0
     }
+  },
+  "now": {
+    "name": "sublime.codes",
+    "alias": "sublime.codes"
   }
 }
