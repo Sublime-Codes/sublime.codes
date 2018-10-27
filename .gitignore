@@ -1,4 +1,6 @@
 .next
 node_modules
 package-lock.json
+.tern-port
 public
+
