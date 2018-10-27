@@ -36,12 +36,12 @@ export function Team() {
                 onMouseOut={handleHover()}
                 src="/static/miguel.jpg"
               />
-              <img
+              {/* <img
                 className={hovered === MEMBERS.JOAN ? 'hover' : ''}
                 onMouseOver={handleHover(MEMBERS.JOAN)}
                 onMouseOut={handleHover()}
                 src="/static/joan.jpg"
-              />
+              />] */}
             </div>
           </SectionBlockColumn>
           <SectionBlockColumn>
@@ -70,13 +70,13 @@ export function Team() {
                 app performance. He is a reference in the frontend Community
                 thanks to his YouTube channel and Udemy courses.
               </p>
-              <p
+              {/* <p
                 className={hovered === MEMBERS.JOAN ? 'hover' : ''}
                 onMouseOver={handleHover(MEMBERS.JOAN)}
                 onMouseOut={handleHover()}
               >
                 <strong>Joan Leon</strong>
-              </p>
+              </p> */}
             </div>
           </SectionBlockColumn>
         </section>
