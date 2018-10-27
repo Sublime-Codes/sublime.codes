@@ -7,7 +7,7 @@ export const Hero = () => (
       <h1>
         Let us make your next project <i>sublime</i>
       </h1>
-      <h2>40 years of experience combined in one consultancy team</h2>
+      <h2>Over 30 years of experience combined in one consultancy team</h2>
     </div>
     <style jsx>{`
       h1,

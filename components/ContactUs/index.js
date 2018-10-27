@@ -11,7 +11,7 @@ export class ContactUs extends React.Component {
 
   render() {
     return (
-      <>
+      <React.Fragment>
         <SectionBlock
           title={
             <span id="contact">
@@ -142,7 +142,7 @@ export class ContactUs extends React.Component {
             appearance: none;
           }
         `}</style>
-      </>
+      </React.Fragment>
     )
   }
 }
