@@ -15,4 +15,4 @@ cache:
 script:
   - npm run build && npm run export
   - npm install now -g
-  - now ./public --static --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+  - now ./public -t $NOW_TOKEN -A ../now.json && now alias -t $NOW_TOKEN
