@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
           />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-TODO"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-30525085-9"
           />
 
           <script
@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-TODO');
+            gtag('config', 'UA-30525085-9');
             `
             }}
           />
