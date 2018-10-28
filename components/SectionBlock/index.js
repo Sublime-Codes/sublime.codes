@@ -15,11 +15,13 @@ SectionBlockColumn.propTypes = {
   children: PropTypes.any
 }
 
-export const SectionBlock = ({children, isFlex, title}) => (
+export const SectionBlock = ({boldTitle, children, id, isFlex, title}) => (
   <React.Fragment>
-    <section>
+    <section id={id}>
       <header>
-        <h2>{title}</h2>
+        <h2>
+          {title} {boldTitle ? <strong>{boldTitle}</strong> : ''}
+        </h2>
       </header>
       <div>{children}</div>
     </section>
@@ -34,19 +36,21 @@ export const SectionBlock = ({children, isFlex, title}) => (
         justify-content: space-between;
       }
       h2 {
-        font-size: 24px;
+        color: #000;
+        font-size: 32px;
         font-weight: 300;
-        padding-bottom: 16px;
-      }
-      h2 strong {
-        font-weight: 500;
+        line-height: 36px;
+        padding-bottom: 32px;
+        text-align: center;
       }
     `}</style>
   </React.Fragment>
 )
 
 SectionBlock.propTypes = {
+  boldTitle: PropTypes.string,
   children: PropTypes.any,
+  id: PropTypes.string,
   isFlex: PropTypes.bool,
   title: PropTypes.string
 }

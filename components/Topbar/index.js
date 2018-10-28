@@ -10,18 +10,21 @@ export const Topbar = () => (
     <style jsx>{`
       header {
         align-items: center;
-        color: #000;
         display: flex;
         flex-flow: row nowrap;
         height: 48px;
-        justify-content: space-between;
+        justify-content: center;
         margin: 0 auto;
         max-width: 900px;
         padding: 32px 0;
-        pointer-events: none;
         top: 0;
-        transition: background-color 1s ease;
         width: 100%;
+      }
+
+      @media (min-width: 900px) {
+        header {
+          justify-content: space-between;
+        }
       }
     `}</style>
   </React.Fragment>

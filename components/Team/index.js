@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from 'react'
-import {SectionBlock, SectionBlockColumn} from '../SectionBlock'
+import {SectionBlock} from '../SectionBlock'
 
 const MEMBERS = {
   CARLOS: 1,
@@ -14,72 +14,62 @@ export function Team() {
 
   return (
     <React.Fragment>
-      <SectionBlock
-        title={
-          <span id="team">
-            Small team, <strong>big players</strong>
-          </span>
-        }
-      >
-        <section>
-          <SectionBlockColumn>
-            <div>
-              <img
-                className={hovered === MEMBERS.CARLOS ? 'hover' : ''}
-                onMouseOver={handleHover(MEMBERS.CARLOS)}
-                onMouseOut={handleHover()}
-                src="/static/carlos.jpg"
-              />
-              <img
-                className={hovered === MEMBERS.MIGUEL ? 'hover' : ''}
-                onMouseOver={handleHover(MEMBERS.MIGUEL)}
-                onMouseOut={handleHover()}
-                src="/static/miguel.jpg"
-              />
-              {/* <img
-                className={hovered === MEMBERS.JOAN ? 'hover' : ''}
-                onMouseOver={handleHover(MEMBERS.JOAN)}
-                onMouseOut={handleHover()}
-                src="/static/joan.jpg"
-              />] */}
-            </div>
-          </SectionBlockColumn>
-          <SectionBlockColumn>
-            <div className={hovered > 0 ? 'hover' : ''}>
-              <p
-                className={hovered === MEMBERS.CARLOS ? 'hover' : ''}
-                onMouseOver={handleHover(MEMBERS.CARLOS)}
-                onMouseOut={handleHover()}
-              >
-                <strong>Carlos Villuendas</strong> is a full-stack developer
-                with 12+ years experience in software development. He's been
-                involved in several international web projects with millions of
-                daily users. He likes all things JavaScript and has a passion
-                for minimalistic, highly-scalable web architecture. Avid
-                contributor to open-source projects and, in general, an
-                enthusiast of a free Internet.
-              </p>
-              <p
-                className={hovered === MEMBERS.MIGUEL ? 'hover' : ''}
-                onMouseOver={handleHover(MEMBERS.MIGUEL)}
-                onMouseOut={handleHover()}
-              >
-                <strong>Miguel Ángel Durán</strong> is a professional developer
-                with an ample ReactJS background and over 15 years of experience
-                as a web consultant. He has lately specialized in improving web
-                app performance. He is a reference in the frontend Community
-                thanks to his YouTube channel and Udemy courses.
-              </p>
-              {/* <p
-                className={hovered === MEMBERS.JOAN ? 'hover' : ''}
-                onMouseOver={handleHover(MEMBERS.JOAN)}
-                onMouseOut={handleHover()}
-              >
-                <strong>Joan Leon</strong>
-              </p> */}
-            </div>
-          </SectionBlockColumn>
-        </section>
+      <SectionBlock id="team" title="Small team," boldTitle="big players">
+        <div>
+          <img
+            className={hovered === MEMBERS.CARLOS ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.CARLOS)}
+            onMouseOut={handleHover()}
+            src="/static/carlos.jpg"
+          />
+          <img
+            className={hovered === MEMBERS.MIGUEL ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.MIGUEL)}
+            onMouseOut={handleHover()}
+            src="/static/miguel.jpg"
+          />
+          <img
+            className={hovered === MEMBERS.JOAN ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.JOAN)}
+            onMouseOut={handleHover()}
+            src="/static/joan.jpg"
+          />
+        </div>
+        <div className={hovered > 0 ? 'hover' : ''}>
+          <p
+            className={hovered === MEMBERS.CARLOS ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.CARLOS)}
+            onMouseOut={handleHover()}
+          >
+            <strong>Carlos Villuendas</strong> is a full-stack developer with
+            12+ years experience in software development. He's been involved in
+            several international web projects with millions of daily users. He
+            likes all things JavaScript and has a passion for minimalistic,
+            highly-scalable web architecture. Avid contributor to open-source
+            projects and, in general, an enthusiast of a free Internet.
+          </p>
+          <p
+            className={hovered === MEMBERS.MIGUEL ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.MIGUEL)}
+            onMouseOut={handleHover()}
+          >
+            <strong>Miguel Ángel Durán</strong> is a professional developer with
+            an ample ReactJS background and over 15 years of experience as a web
+            consultant. He has lately specialized in improving web app
+            performance. He is a reference in the frontend Community thanks to
+            his YouTube channel and Udemy courses.
+          </p>
+          <p
+            className={hovered === MEMBERS.JOAN ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.JOAN)}
+            onMouseOut={handleHover()}
+          >
+            <strong>Joan León</strong> is a Frontend developer with more than 15
+            years experience in UI development, animation, and web interaction.
+            He is passionate about teaching and sharing knowledge, always
+            spreading his passion for CSS in the Frontend community.
+          </p>
+        </div>
       </SectionBlock>
       <style jsx>{`
         section {
@@ -98,11 +88,11 @@ export function Team() {
           justify-content: center;
         }
         img {
-          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
           cursor: crosshair;
           filter: grayscale();
           height: 300px;
-          width: 50%;
+          width: 33.3%;
           object-fit: cover;
           transition: filter 300ms ease;
         }
@@ -112,7 +102,6 @@ export function Team() {
         }
         p {
           cursor: crosshair;
-          font-size: 14px;
           margin: 0 0 8px 0;
           transition: opacity 0.3s ease;
         }
@@ -123,16 +112,6 @@ export function Team() {
         section div:last-child:hover p:hover,
         div.hover p.hover {
           opacity: 1;
-        }
-        div p:first-child:after {
-          border: 0;
-          color: #aaa;
-          content: '~';
-          display: block;
-          font-size: 16px;
-          font-weight: 200;
-          margin-top: 8px;
-          text-align: center;
         }
       `}</style>
     </React.Fragment>

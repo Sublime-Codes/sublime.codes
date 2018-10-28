@@ -30,7 +30,7 @@ export const PageLayout = ({children, description = '', title = '', url}) => (
           display: flex;
           min-height: 100vh;
           flex-direction: column;
-          color: #242121;
+          color: rgb(68, 68, 68);
           font-feature-settings: 'liga' 0;
           line-height: 1.8;
         }
@@ -53,6 +53,9 @@ export const PageLayout = ({children, description = '', title = '', url}) => (
         }
         ::selection {
           background-color: #a8dcff;
+        }
+        main {
+          padding: 0 16px;
         }
       `}
     </style>
