@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
             type="image/x-icon"
             href="/static/favicon.ico"
           />
+          <link rel="canonical" href="https://sublime.codes" />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
