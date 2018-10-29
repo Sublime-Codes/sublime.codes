@@ -13,6 +13,7 @@ export const Logo = () => (
         }
 
         .Typist .Cursor--blinking {
+          color: #0099ff;
           opacity: 1;
           animation: blink 1s linear infinite;
         }
