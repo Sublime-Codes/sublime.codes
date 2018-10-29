@@ -4,7 +4,8 @@ import {SectionBlock} from '../SectionBlock'
 const MEMBERS = {
   CARLOS: 1,
   MIGUEL: 2,
-  JOAN: 3
+  JOAN: 3,
+  DAVID: 4
 }
 
 export function Team() {
@@ -33,6 +34,12 @@ export function Team() {
             onMouseOver={handleHover(MEMBERS.JOAN)}
             onMouseOut={handleHover()}
             src="/static/joan.jpg"
+          />
+          <img
+            className={hovered === MEMBERS.DAVID ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.DAVID)}
+            onMouseOut={handleHover()}
+            src="/static/david.jpg"
           />
         </div>
         <div className={hovered > 0 ? 'hover' : ''}>
@@ -69,6 +76,16 @@ export function Team() {
             He is passionate about teaching and sharing knowledge, always
             spreading his passion for CSS in the Frontend community.
           </p>
+          <p
+            className={hovered === MEMBERS.DAVID ? 'hover' : ''}
+            onMouseOver={handleHover(MEMBERS.DAVID)}
+            onMouseOut={handleHover()}
+          >
+            <strong>David García</strong> is passionate about technology and
+            computers since early age. Involved in a wide variety of projects
+            since 1999. Currently working as a frontend developer using
+            technologies like ReactJS, ES6 and enjoying in everything he does.
+          </p>
         </div>
       </SectionBlock>
       <style jsx>{`
@@ -92,13 +109,16 @@ export function Team() {
           cursor: crosshair;
           filter: grayscale();
           height: 300px;
-          width: 33.3%;
+          width: 25%;
           object-fit: cover;
           transition: filter 300ms ease;
         }
         img:hover,
         img.hover {
           filter: none;
+        }
+        section div h2 {
+          text-align: center;
         }
         p {
           cursor: crosshair;
