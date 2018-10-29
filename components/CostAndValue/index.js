@@ -29,9 +29,8 @@ export const CostAndValue = () => (
         text-align: center;
       }
       section {
-        max-width: 500px;
         margin: 0 auto;
-        width: 100%;
+        max-width: 500px;
       }
     `}</style>
   </React.Fragment>

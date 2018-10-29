@@ -17,8 +17,6 @@ export const Topbar = () => (
         margin: 0 auto;
         max-width: 900px;
         padding: 32px 0;
-        top: 0;
-        width: 100%;
       }
 
       @media (min-width: 900px) {

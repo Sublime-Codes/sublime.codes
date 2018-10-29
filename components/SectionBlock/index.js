@@ -33,7 +33,7 @@ export const SectionBlock = ({boldTitle, children, id, isFlex, title}) => (
       }
       div {
         display: ${isFlex ? 'flex' : 'block'};
-        justify-content: space-between;
+        ${isFlex ? 'justify-content: space-between;' : ''}
       }
       h2 {
         color: #000;
