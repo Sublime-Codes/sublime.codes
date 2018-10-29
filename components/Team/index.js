@@ -109,13 +109,16 @@ export function Team() {
           cursor: crosshair;
           filter: grayscale();
           height: 300px;
-          width: 33.3%;
+          width: 25%;
           object-fit: cover;
           transition: filter 300ms ease;
         }
         img:hover,
         img.hover {
           filter: none;
+        }
+        section div h2 {
+          text-align: center;
         }
         p {
           cursor: crosshair;
