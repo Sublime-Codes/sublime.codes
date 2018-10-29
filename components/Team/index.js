@@ -84,7 +84,7 @@ export function Team() {
             <strong>David García</strong> is passionate about technology and
             computers since early age. Involved in a wide variety of projects
             since 1999. Currently working as a frontend developer using
-            technologies like ReactJS, ES6 and enjoying in everything I do.
+            technologies like ReactJS, ES6 and enjoying in everything he does.
           </p>
         </div>
       </SectionBlock>
