@@ -63,10 +63,6 @@ export function ContactUs() {
           text-align: center;
         }
 
-        div {
-          display: block;
-        }
-
         fieldset {
           border: 0;
           margin: 0;
