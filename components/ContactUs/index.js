@@ -34,7 +34,7 @@ export function ContactUs() {
           <div>
             <fieldset>
               <label htmlFor="q4">What's your position?</label>
-              <select id="q4" name="q4" tabIndex="0">
+              <select id="q4" name="q4" tabIndex="2">
                 <option>entrepeneur</option>
                 <option>CTO</option>
                 <option>developer</option>
@@ -43,7 +43,7 @@ export function ContactUs() {
             </fieldset>
             <fieldset>
               <label htmlFor="q5">What do you need?</label>
-              <select id="q5" name="q5" tabIndex="0">
+              <select id="q5" name="q5" tabIndex="3">
                 <option>build a new idea</option>
                 <option>accelerate my current project</option>
                 <option>decouple my monolith</option>
