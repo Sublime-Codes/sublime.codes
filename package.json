@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "co": "sui-mono commit",
     "dev": "next",
     "export": "next export -o public",
     "lint": "sui-lint js"
@@ -15,15 +14,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@s-ui/lint": "2",
-    "@s-ui/mono": "1"
+    "@s-ui/lint": "3"
   },
   "dependencies": {
-    "next": "7.0.2",
-    "prop-types": "15.6.2",
-    "react": "16.7.0-alpha.0",
-    "react-dom": "16.7.0-alpha.0",
-    "react-typist": "2.0.4"
+    "next": "9.0.5",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-typist": "2.0.5"
   },
   "eslintConfig": {
     "extends": [
@@ -31,14 +29,6 @@
     ],
     "rules": {
       "react/react-in-jsx-scope": 0
-    }
-  },
-  "config": {
-    "sui-mono": {
-      "packagesFolder": "components"
-    },
-    "validate-commit-msg": {
-      "types": "@s-ui/mono/src/types"
     }
   }
 }
